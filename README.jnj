@@ -1,0 +1,13 @@
+{% macro badge(target, slug, color='c02000', label=None, labelColor='585858', logo=None, logoColor='white') %}
+  <a href="{{ target }}">
+    <img src="https://img.shields.io/{{ slug }}?style=for-the-badge{% if label %}&label=%40zeroSteiner{% endif %}{% if logo %}&logo={{ logo }}{% endif %}&logoColor={{ logoColor }}&labelColor={{ labelColor }}&color={{ color }}">
+  </a>
+{% endmacro %}
+
+<p align="left">
+{{ badge('https://twitter.com/zeroSteiner', 'twitter/follow/zeroSteiner', label='%40zeroSteiner', logo='twitter') }}
+{{ badge('https://www.linkedin.com/in/spencer-mcintyre-b48987194/', 'badge/-spencer-blue', logo='Linkedin') }}
+{{ badge('https://keybase.io/zeroSteiner', 'keybase/pgp/zeroSteiner') }}
+</p>
+
+<img src="https://github-readme-stats.vercel.app/api?username=zeroSteiner&show_icons=true&theme=dark&title_color=d0d0d0&icon_color=d81000&text_color=e0e0e0&bg_color=383838">
